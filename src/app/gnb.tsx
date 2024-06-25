@@ -20,8 +20,6 @@ const ParentGnbItem = ({
   route: ParentRoute;
   currentPath: ROUTE_PATH;
 }) => {
-  console.log(currentPath);
-
   const open = children.includes(currentPath);
 
   return (
