@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Test2_React = () => {
+const Test_React = () => {
   const [show, toggle] = useState(false);
 
   return (
@@ -12,4 +12,4 @@ const Test2_React = () => {
   );
 };
 
-export default Test2_React;
+export default Test_React;
