@@ -1,4 +1,5 @@
 import Accordions from "./components/accordion";
+import TabMenus from "./components/tabMenu";
 import Test_React from "./components/test/react";
 import Test_Vanilla from "./components/test/vanilla";
 
@@ -8,6 +9,7 @@ const routerPaths = [
   "/test/vanilla",
   "/test/react",
   "/accordions",
+  "/tabMenus",
 ] as const;
 export type ROUTE_PATH = (typeof routerPaths)[number];
 
@@ -32,7 +34,7 @@ export const routes: Record<ROUTE_PATH, ROUTE> = {
     key: "/",
     link: "/",
     name: "root",
-    children: ["/test", "/accordions"],
+    children: ["/test", "/accordions", "/tabMenus"],
   },
 
   "/test": {
@@ -58,6 +60,12 @@ export const routes: Record<ROUTE_PATH, ROUTE> = {
     link: "/accordions",
     name: "아코디언",
     children: Accordions,
+  },
+  "/tabMenus": {
+    key: "/tabMenus",
+    link: "/tabMenus",
+    name: "탭메뉴",
+    children: TabMenus,
   },
 };
 
